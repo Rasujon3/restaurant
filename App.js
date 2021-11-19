@@ -1,9 +1,13 @@
 import React from 'react';
 import AppNavigator from './app/AppNavigator';
+import { NativeScreenContainer } from 'react-native-screens';
 
 const App = () => {
   return (
-    <AppNavigator></AppNavigator>
+    <NativeScreenContainer>
+        <AppNavigator />
+    </NativeScreenContainer>
+    
   );
 };
 
