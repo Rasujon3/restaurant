@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, View, SafeAreaView, StyleSheet, Platform } from 'react-native';
 import Constants from 'expo-constants';
 import {enableScreens} from 'react-native-screens'
-enableScreens()
+enableScreens(false);
 
 const HomeScreen = () => {
     return (
