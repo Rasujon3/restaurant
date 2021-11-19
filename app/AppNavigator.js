@@ -13,21 +13,23 @@ const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
 const MenuStack = () => {
-    <Stack.Navigator>
+   return <Stack.Navigator>
         <Stack.Screen name="Menu" component={MenuScreen} />
         <Stack.Screen name="Dish Detail" component={DishDetailScreen} />
-
     </Stack.Navigator>
 }
 
 
 const AppNavigator = () => {
     return (
-        <NavigationContainer>
-            <Drawer.Navigator initialRouteName="Home" >
-                <Drawer.Screen name="Home" component={HomeScreen} />
-                <Drawer.Screen name="Menu" component={MenuStack} />
-            </Drawer.Navigator>
+        <NavigationContainer independent={true}>
+            
+                <Drawer.Navigator initialRouteName="Home" >
+                    <Drawer.Screen name="Home" component={HomeScreen} />
+                    <Drawer.Screen name="Menu" component={MenuStack} />
+                </Drawer.Navigator>
+           
+
         </NavigationContainer>
         
     );

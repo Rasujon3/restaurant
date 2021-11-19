@@ -9,7 +9,7 @@ export const loadDishes = dishes => {
 }
 
 export const getDishes = () => dispatch => {
-    axios.get("http://localhost:3000/dishes")
-        .then(response => console.log(response))
+    axios.get("https://restaurant-15bdd-default-rtdb.asia-southeast1.firebasedatabase.app/.json")
+        .then(response => dispatch(loadDishes(response.data)))
         .then(err => console.log(err))
 }
