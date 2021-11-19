@@ -1,6 +1,8 @@
 import React from 'react';
 import { Text, View, SafeAreaView, StyleSheet, Platform } from 'react-native';
 import Constants from 'expo-constants';
+import {enableScreens} from 'react-native-screens'
+enableScreens()
 
 const HomeScreen = () => {
     return (
@@ -14,7 +16,7 @@ const HomeScreen = () => {
 
 const styles = StyleSheet.create({
     view: {
-        paddingTop: Platform.OS ==='ios' ? 0 : Constants.statusBarHeight,
+        paddingTop: Platform.OS === 'ios' ? 0 : Constants.statusBarHeight,
     }
 })
 
