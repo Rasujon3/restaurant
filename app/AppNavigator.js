@@ -6,8 +6,7 @@ import DishDetailScreen from './screens/DishDetailScreen';
 import HomeScreen from './screens/HomeScreen';
 import MenuScreen from './screens/MenuScreen';
 import {createStackNavigator} from '@react-navigation/stack';
-import {enableScreens} from 'react-native-screens'
-enableScreens()
+
 
 
 const Drawer = createDrawerNavigator();

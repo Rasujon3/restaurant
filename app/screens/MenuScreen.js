@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button, Text, View } from 'react-native';
-import {enableScreens} from 'react-native-screens'
-enableScreens(false);
+
 
 
 const MenuScreen = (props) => {
