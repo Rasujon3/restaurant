@@ -13,24 +13,29 @@ const Drawer = createDrawerNavigator();
 const Stack = createStackNavigator();
 
 const MenuStack = () => {
-   return <Stack.Navigator>
-        <Stack.Screen name="Menu" component={MenuScreen} />
-        <Stack.Screen name="Dish Detail" component={DishDetailScreen} />
-    </Stack.Navigator>
+   return (
+        <Stack.Navigator screenOptions={{
+            headerStyle: {
+                backgroundColor: "#F53B50",
+            },
+            headerTintColor: "#fff",
+            headerTitleStyle: {
+                fontWeight: 'bold',
+            }
+        }}>
+                <Stack.Screen name="Menu" component={MenuScreen} />
+                <Stack.Screen name="Dish Detail" component={DishDetailScreen} options={({route})=> ({title: route.params.dish.name})} />
+        </Stack.Navigator>
+    )
 }
 
 
 const AppNavigator = () => {
-    return (
-        <NavigationContainer independent={true}>
-            
-                <Drawer.Navigator initialRouteName="Home" >
-                    <Drawer.Screen name="Home" component={HomeScreen} />
-                    <Drawer.Screen name="Menu" component={MenuStack} />
-                </Drawer.Navigator>
-           
-
-        </NavigationContainer>
+    return (    
+        <Drawer.Navigator initialRouteName="Home" >
+            <Drawer.Screen name="Home" component={HomeScreen} />
+            <Drawer.Screen name="Menu" component={MenuStack} />
+        </Drawer.Navigator> 
         
     );
 };
